@@ -1,0 +1,1 @@
+A simple python script that can identify which subclade the mutation belongs to in the mitochondrial haplogroup U. The user is prompted to enter a defining mutation and in return will receive which subclade this mutation belongs to.
