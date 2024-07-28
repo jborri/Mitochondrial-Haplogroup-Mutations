@@ -1,1 +1,3 @@
-A simple python script that can identify which subclade the mutation belongs to in the mitochondrial haplogroup U. The user is prompted to enter a defining mutation and in return will receive which subclade this mutation belongs to.
+A simple python script that can identify which subclade the mutation belongs to in the mitochondrial haplogroup U. The user is prompted to enter a defining mutation and in return will receive which subclade this mutation belongs to. Mutations such as *transversions*, *insertions*, *deletions*, *reversions*; and differentiation of where the mutation occurred(e.g., coding vs. control region mutations) were removed during the cleaning process.
+
+Mutations were sourced from: https://www.phylotree.org/tree/U.htm
