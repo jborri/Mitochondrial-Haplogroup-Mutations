@@ -7,6 +7,8 @@ from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.metrics import accuracy_score, classification_report
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 
+#DataSource for insulin mutations: https://www.uniprot.org/uniprotkb/P01308/variant-viewer
+
 warnings.filterwarnings("ignore")
 
 with open('/Users/jborri/Documents/GitHub/Mitochondrial-Haplogroup-Mutations/Predicting the Effects of Variant Mutations/P01308.json', 'r') as file:
