@@ -1,4 +1,6 @@
 
+from pathlib import Path
+
 import pandas as pd
 
 def load_haplogroups(filename):
@@ -8,7 +10,7 @@ def load_haplogroups(filename):
         haplogroups[row['Haplogroup']] = row['Defining_Mutations'].split()
     return haplogroups
 
-haplogroups = load_haplogroups('Haplogroup Analysis Tool/Haplogroups.csv')
+haplogroups = load_haplogroups(Path(__file__).with_name("Haplogroups.csv"))
 
 def identify_haplogroup(mutations, haplogroups):
     for haplogroup, defining_mutations in haplogroups.items():

@@ -1,10 +1,13 @@
 import json
+from pathlib import Path
+
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
 
-with open('/Users/jborri/Documents/GitHub/Mitochondrial-Haplogroup-Mutations/Predicting the Effects of Variant Mutations/P01308.json', 'r') as file:
+data_path = Path(__file__).with_name("P01308.json")
+with data_path.open("r", encoding="utf-8") as file:
     data = json.load(file)
 
 def preprocess_data(data):
@@ -26,7 +29,6 @@ def preprocess_data(data):
             records.append(record)
     return pd.DataFrame(records)
 
-data = json.load(file)
 df = preprocess_data(data)
 
 df_encoded = pd.get_dummies(df, columns=['consequence_type', 'wild_type', 'mutated_type', 'polyphen', 'sift'])
