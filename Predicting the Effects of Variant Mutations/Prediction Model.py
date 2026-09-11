@@ -1,4 +1,6 @@
 import json
+from pathlib import Path
+
 import pandas as pd
 import warnings
 import random
@@ -11,7 +13,8 @@ from sklearn.preprocessing import LabelEncoder, StandardScaler
 
 warnings.filterwarnings("ignore")
 
-with open('/Users/jborri/Documents/GitHub/Mitochondrial-Haplogroup-Mutations/Predicting the Effects of Variant Mutations/P01308.json', 'r') as file:
+data_path = Path(__file__).with_name("P01308.json")
+with data_path.open("r", encoding="utf-8") as file:
     data = json.load(file)
 
 def preprocess_data(data):
